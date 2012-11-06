@@ -292,7 +292,7 @@ void version()
 {
    const char* speex_version;
    speex_lib_ctl(SPEEX_LIB_GET_VERSION_STRING, (void*)&speex_version);
-   printf ("speexdec (Speex decoder) version %s (compiled " __DATE__ ")\n", speex_version);
+   printf ("speexdec (Speex decoder) version %s\n", speex_version);
    printf ("Copyright (C) 2002-2006 Jean-Marc Valin\n");
 }
 
