@@ -8,8 +8,6 @@ Url:            http://www.speex.org/
 Group:          System/Libraries
 Source:         %{name}-%{package_version}.tar.bz2
 Source2:        baselibs.conf
-Patch1:         speex-1.0.5-warning-fix.diff
-Patch2:         speex-no-build-date.patch
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
@@ -58,8 +56,6 @@ SpeeX library.
 
 %prep
 %setup -q -n %{name}-%{package_version}
-%patch1
-%patch2
 
 %build
 autoreconf -fi
