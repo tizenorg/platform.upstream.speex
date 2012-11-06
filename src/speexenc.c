@@ -531,13 +531,14 @@ int main(int argc, char **argv)
    }
 
    {
-      fread(first_bytes, 1, 12, fin);
+      if (fread(first_bytes, 1, 12, fin) == 12) {
       if (strncmp(first_bytes,"RIFF",4)==0 && strncmp(first_bytes,"RIFF",4)==0)
       {
          if (read_wav_header(fin, &rate, &chan, &fmt, &size)==-1)
             exit(1);
          wave_input=1;
          lsb=1; /* CHECK: exists big-endian .wav ?? */
+      }
       }
    }
 
