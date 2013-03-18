@@ -1,17 +1,16 @@
 Name:           speex
 %define package_version 1.2rc1
 Version:        1.1.999_%{package_version}
-Release:        8
+Release:        9
 License:        BSD-3-Clause
 Summary:        An Open Source, Patent Free Speech Codec
 Url:            http://www.speex.org/
-Group:          System/Libraries
+Group:          Multimedia/Audio
 Source:         %{name}-%{package_version}.tar.bz2
 Source2:        baselibs.conf
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
 Speex is a patent free audio codec designed especially for voice
@@ -22,7 +21,7 @@ to the Vorbis codec.
 %package -n libspeex
 License:        BSD-3-Clause
 Summary:        An Open Source, Patent Free Speech Codec Library
-Group:          System/Libraries
+Group:          Multimedia/Audio
 
 %description -n libspeex
 Speex is a patent free audio codec designed especially for voice
@@ -33,7 +32,7 @@ to the Vorbis codec.
 %package -n libspeexdsp
 License:        BSD-3-Clause
 Summary:        An Open Source, Patent Free Speech Codec Library
-Group:          System/Libraries
+Group:          Multimedia/Audio
 
 %description -n libspeexdsp
 Speex is a patent free audio codec designed especially for voice
@@ -44,7 +43,7 @@ to the Vorbis codec.
 %package devel
 License:        BSD-3-Clause
 Summary:        Development package for SpeeX
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       glibc-devel
 Requires:       libogg-devel
 Requires:       libspeex = %{version}
@@ -79,8 +78,7 @@ rm -rf %{buildroot}%{_datadir}/doc/speex*
 
 %files
 %defattr(-,root,root)
-%doc COPYING
-%doc doc/*.pdf
+%license COPYING
 %{_bindir}/speex*
 %{_mandir}/man?/*
 
@@ -94,7 +92,6 @@ rm -rf %{buildroot}%{_datadir}/doc/speex*
 
 %files devel
 %defattr(-,root,root)
-%doc doc/manual.pdf
 %{_includedir}/*
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*.pc
