@@ -8,6 +8,7 @@ Url:            http://www.speex.org/
 Group:          Multimedia/Audio
 Source:         %{name}-%{package_version}.tar.bz2
 Source2:        baselibs.conf
+Source1001: 	speex.manifest
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
@@ -55,6 +56,7 @@ SpeeX library.
 
 %prep
 %setup -q -n %{name}-%{package_version}
+cp %{SOURCE1001} .
 
 %build
 autoreconf -fi
@@ -77,20 +79,24 @@ rm -rf %{buildroot}%{_datadir}/doc/speex*
 %postun -n libspeexdsp -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING
 %{_bindir}/speex*
 %{_mandir}/man?/*
 
 %files -n libspeex
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_libdir}/libspeex.so.*
 
 %files -n libspeexdsp
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_libdir}/libspeexdsp.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/lib*.so
