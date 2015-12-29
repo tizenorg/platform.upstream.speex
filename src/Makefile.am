@@ -9,7 +9,7 @@ INCLUDES = -I$(top_srcdir)/include -I$(top_builddir)/include -I$(top_builddir) @
 
 man_MANS = speexenc.1 speexdec.1
 
-EXTRA_DIST = $(man_MANS) getopt_win.h getopt.c getopt1.c wave_out.c wave_out.h skeleton.h
+EXTRA_DIST = $(man_MANS) wave_out.c wave_out.h skeleton.h
 
 include_HEADERS = 
 noinst_HEADERS = wav_io.h

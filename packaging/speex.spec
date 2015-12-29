@@ -2,7 +2,7 @@ Name:           speex
 %define package_version 1.2rc1
 Version:        1.1.999_%{package_version}
 Release:        9
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        An Open Source, Patent Free Speech Codec
 Url:            http://www.speex.org/
 Group:          Multimedia/Audio
@@ -20,7 +20,7 @@ narrowband and wideband quality. This project aims to be complementary
 to the Vorbis codec.
 
 %package -n libspeex
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        An Open Source, Patent Free Speech Codec Library
 Group:          Multimedia/Audio
 
@@ -31,7 +31,7 @@ narrowband and wideband quality. This project aims to be complementary
 to the Vorbis codec.
 
 %package -n libspeexdsp
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        An Open Source, Patent Free Speech Codec Library
 Group:          Multimedia/Audio
 
@@ -42,7 +42,7 @@ narrowband and wideband quality. This project aims to be complementary
 to the Vorbis codec.
 
 %package devel
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        Development package for SpeeX
 Group:          Development/Libraries
 Requires:       glibc-devel
